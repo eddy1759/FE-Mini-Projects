@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.input {
+    visibility: hidden;
+}
+
+.label {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background-color: lightgray;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.circle {
+    width: 34px;
+    height: 34px;
+    background-color: white;
+    border-radius: 50%;
+    top: 3%;
+    position: absolute;
+    left: 3%;
+    animation: toogleOff 0.4s linear forwards;
+}
+
+.input:checked + .label {
+    background-color: salmon;
+}
+
+@keyframes toggleOn {
+    0% {
+        transform: translate(0)
+    }
+    100% {
+        transform: translate(40px)
+    }
+}
+
+.input:checked + .label .circle {
+    animation: toggleOn 0.4s linear forwards;
+}
+
+@keyframes toggleOff {
+    0% {
+        transform: translate(40px)
+    }
+    100% {
+        transform: translate(0)
+    }
+}
