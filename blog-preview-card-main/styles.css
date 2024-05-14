@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 50%);
+    --Black: hsl(0, 0%, 7%);
+    --Blue: hsl(228, 45%, 44%);
+    --Body-Font-Size: 16px;
+    --Attrition-Font-Size: 11px;
+    --Font-Family: 'Figtree', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    font-family: var(--Font-Family);
+    background-color: var(--Yellow);
+}
+
+.container {
+    background-color: var(--White);
+    border-radius: 15px;
+    box-shadow: 0 10px 40px var(--Grey);
+    padding: 4%;
+    top: 25%;
+    text-align: center;
+    width: 375px;
+    box-shadow: 5px 5px var(--Black);
+;
+}
+
+.card__image {
+    border-radius: 15px;
+    width: 375px;
+}
+
+.btn {
+    background-color: var(--Yellow);
+    border: none;
+    border-radius: 5px;
+    color: var(--Black);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 20px;
+    margin-top: 10px;
+    display: block;
+}
+
+
+
+/* <style>
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+</style> */
