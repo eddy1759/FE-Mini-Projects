@@ -11,50 +11,103 @@
     --Font-Family: 'Figtree', sans-serif;
 }
 
-body {
+* {
     margin: 0;
-    height: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Font-Family);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    font-family: var(--Font-Family);
     background-color: var(--Yellow);
+    font-size: var(--Body-Font-Size);
 }
 
 .container {
+    max-width: 350px;
     background-color: var(--White);
-    border-radius: 15px;
-    box-shadow: 0 10px 40px var(--Grey);
-    padding: 4%;
-    top: 25%;
-    text-align: center;
-    width: 375px;
-    box-shadow: 5px 5px var(--Black);
-;
+    padding: 18px;
+    border: 1px solid var(--Black);
+    border-radius: 20px;
+    box-shadow: 10px 10px 0;
+    margin-bottom: 20px;
 }
 
 .card__image {
-    border-radius: 15px;
-    width: 375px;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 18px;
 }
 
 .btn {
     background-color: var(--Yellow);
     border: none;
-    border-radius: 5px;
-    color: var(--Black);
-    font-size: 16px;
+    width: 70px;
+    height: 30px;
+    border-radius: 6px;
+    font-size: 12px;
     font-weight: 700;
-    padding: 10px 20px;
-    margin-top: 10px;
-    display: block;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background-color 0.4s color 0.4s;
 }
 
+.btn:hover {
+    background-color: var(--Black);
+    color: var(--Yellow);
+}
 
+h4 {
+    color: var(--Grey);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
 
-/* <style>
+h2 {
+    color: var(--Black);
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.6s;  
+}
+
+h2:hover {
+    color: var(--Yellow);
+}
+
+p {
+    color: var(--Grey);
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+    line-height: 18px;
+
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.profile img {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+}
+
+.name {
+    color: var(--Black);
+    font-size: 12px;
+    font-weight: 700;
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
-</style> */
