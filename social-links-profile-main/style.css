@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --Primary-color: hsl(75, 94%, 57%);
+  --Neutral-white: hsl(0, 0%, 100%);
+  --Neutral-dark-grey: hsl(0, 0%, 12%);
+  --paragraph-color: #AAAAAA;
+  --Off-black: hsl(0, 0%, 8%);
+  --Font-size-paragraph: 14px;
+  --Font-family-inter: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #181818;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--Font-family-inter);
+}
+
+.profile-card {
+  background-color: var(--Neutral-dark-grey);
+  max-width: 350px;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: var(--Neutral-white);
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+  
+h2 {
+  color: var(--Primary-color);
+  font-size: 16px;
+  margin: 0 0 20px;
+}
+  
+p {
+  color: var(--paragraph-color);
+  font-size: var(--Font-size-paragraph);
+  margin: 0 0 25px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+  
+.button {
+  background-color: #333333;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin: 5px 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+  
+.button:hover {
+    background-color: var(--Primary-color)
+}
+
+@media screen and (min-width: 768px) {
+  .profile-card {
+    max-width: 400px;
+  }
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .button {
+    padding: 15px;
+  }
+  
+}
