@@ -1,0 +1,321 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --light-slate-blue-bg: hsl(252, 100%, 67%);
+    --light-royal-blue-bg: hsl(241, 81%, 54%);
+    --violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --persian-blue-circle: hsla(241, 72%, 46%, 0);
+    --neutral-white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-grey-blue: hsl(224, 30%, 27%);
+    --font-size-body: 18px;
+    --font-family: 'Hanken Grotesk', sans-serif;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: 500;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--neutral-white);
+}
+
+.container {
+    display: flex;
+    background-color: var(--neutral-white);
+    border-radius: 32px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 736px;
+    width: 100%;
+}
+
+.result {
+    background: linear-gradient(to bottom, var(--light-slate-blue-bg), var(--light-royal-blue-bg));
+    color: var(--neutral-white);
+    text-align: center;
+    padding: 40px;
+    border-radius: 32px;
+    flex: 1;
+    
+}
+
+.result h2 {
+    font-size: 18px;
+    margin-bottom: 35px;
+    opacity: 0.8;
+}
+
+.circle {
+    background: linear-gradient(to bottom, var(--violet-blue-circle), var(--persian-blue-circle));
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto 35px;
+}
+
+.circle score {
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.circle total {
+    opacity: 0.5;
+}
+
+.result h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.result p {
+      opacity: 0.7;
+      line-height: 1.4;
+}
+
+.summary {
+      padding: 40px;
+      flex: 1;
+}
+
+.summary h2 {
+      font-size: 24px;
+      margin-bottom: 28px;
+}
+
+.summary-item {
+      display: flex;
+      align-items: center;
+      padding: 18px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      background-color: var(--pale-blue);
+}
+
+.summary-item .category {
+      flex-grow: 1;
+      margin-left: 12px;
+}
+
+.summary-item .score {
+      font-weight: bold;
+}
+
+.summary-item .score .total {
+      opacity: 0.5;
+}
+
+.continue {
+      background-color: hsl(224, 30%, 27%);
+      color: white;
+      border: none;
+      border-radius: 128px;
+      padding: 18px;
+      width: 100%;
+      font-size: 18px;
+      margin-top: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+}
+
+.continue:hover {
+      background-color: var(--light-royal-blue);
+}
+
+@media (max-width: 768px) {
+      .container {
+          flex-direction: column;
+          border-radius: 0;
+    }
+
+    .result {
+          border-radius: 0 0 32px 32px;
+    }
+}
+/* <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> 
+*/ 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --light-slate-blue-bg: hsl(252, 100%, 67%);
+    --light-royal-blue-bg: hsl(241, 81%, 54%);
+    --violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --persian-blue-circle: hsla(241, 72%, 46%, 0);
+    --neutral-white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-grey-blue: hsl(224, 30%, 27%);
+    --font-size-body: 18px;
+    --font-family: 'Hanken Grotesk', sans-serif;
+    --shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: 500;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--neutral-white);
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    background-color: var(--neutral-white);
+    border-radius: 32px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    max-width: 736px;
+    width: 100%;
+    margin: auto;
+    flex-direction: row;
+}
+
+.result {
+    background: linear-gradient(to bottom, var(--light-slate-blue-bg), var(--light-royal-blue-bg));
+    color: var(--neutral-white);
+    text-align: center;
+    padding: 40px;
+    border-radius: 32px;
+    flex: 1;
+}
+
+.result h2 {
+    font-size: 18px;
+    margin-bottom: 35px;
+    opacity: 0.8;
+}
+
+.circle {
+    background: linear-gradient(to bottom, var(--violet-blue-circle), var(--persian-blue-circle));
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto 35px;
+}
+
+.circle .score {
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.circle .total {
+    opacity: 0.5;
+    font-size: 18px;
+}
+
+.result h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.result p {
+    opacity: 0.7;
+    line-height: 1.4;
+}
+
+.summary {
+    padding: 40px;
+    flex: 1;
+}
+
+.summary h2 {
+    font-size: 24px;
+    margin-bottom: 28px;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    background-color: var(--pale-blue);
+    transition: transform 0.3s ease;
+    /* opacity: 0.2; */
+}
+
+.summary-item img {
+    width: 20px;
+    height: 20px;
+}
+
+.summary-item .category {
+    flex-grow: 1;
+    margin-left: 12px;
+    font-size: 18px;
+}
+
+.summary-item .score {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.summary-item .score .total {
+    opacity: 0.5;
+}
+
+.continue {
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    border: none;
+    border-radius: 128px;
+    padding: 18px;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.continue:hover {
+    background-color: var(--light-royal-blue-bg);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .result {
+        border-radius: 0 0 32px 32px;
+    }
+}
+
+  
